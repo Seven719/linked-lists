@@ -1,0 +1,16 @@
+{
+  "name": "linked-lists",
+  "version": "1.0.0",
+  "description": "linked list",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "linked",
+    "list"
+  ],
+  "author": "Iulian Nichifor",
+  "license": "MIT",
+  "type": "module"
+}
