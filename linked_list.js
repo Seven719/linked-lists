@@ -124,4 +124,31 @@ export default class LinkedList {
 
     return finalString;
   }
+
+  insertAt(value, index) {
+    if (index < 0) return;
+    if (index > this.size) return;
+    if (index === 0) {
+      this.prepend(value);
+      return;
+    }
+
+    const newNode = new Node(value);
+    let currentNode = this.headNode;
+    let previousNode;
+
+    for (let currentIndex = 0; currentIndex < index; currentIndex++) {
+      previousNode = currentNode;
+      currentNode = currentNode.nextNode;
+    }
+
+    previousNode.nextNode = newNode;
+    newNode.nextNode = currentNode;
+
+    if (newNode.nextNode === null) {
+      this.tailNode = newNode;
+    }
+
+    this.size++;
+  }
 }
