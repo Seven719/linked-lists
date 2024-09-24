@@ -93,4 +93,21 @@ export default class LinkedList {
 
     return false;
   }
+
+  find(value) {
+    if (!this.headNode) return null;
+
+    let currentNode = this.headNode;
+    let index = 0;
+
+    while (currentNode !== null) {
+      if (currentNode.value === value) {
+        return index;
+      }
+      currentNode = currentNode.nextNode;
+      index++;
+    }
+
+    return null;
+  }
 }
