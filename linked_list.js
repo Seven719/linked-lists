@@ -17,4 +17,13 @@ export default class LinkedList {
       this.tailNode = newNode;
     }
   }
+
+  prepend(value) {
+    const newNode = new Node(value, this.headNode);
+
+    if (!this.headNode) {
+      this.tailNode = newNode;
+    }
+    this.headNode = newNode;
+  }
 }
