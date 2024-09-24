@@ -78,4 +78,19 @@ export default class LinkedList {
     this.tailNode.nextNode = null;
     this.size--;
   }
+
+  contains(value) {
+    if (!this.headNode) return;
+
+    let currentNode = this.headNode;
+
+    while (currentNode !== null) {
+      if (currentNode.value == value) {
+        return true;
+      }
+      currentNode = currentNode.nextNode;
+    }
+
+    return false;
+  }
 }
