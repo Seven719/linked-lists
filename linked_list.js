@@ -43,4 +43,18 @@ export default class LinkedList {
   tail() {
     return this.tailNode;
   }
+
+  at(index) {
+    if (index < 0 && index >= this.size) return null;
+
+    let currentNode = this.headNode;
+    let counter = 0;
+
+    while (counter < index) {
+      currentNode = currentNode.nextNode;
+      counter++;
+    }
+
+    return currentNode;
+  }
 }
