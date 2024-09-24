@@ -35,4 +35,8 @@ export default class LinkedList {
   size() {
     return this.size;
   }
+
+  head() {
+    return this.headNode;
+  }
 }
