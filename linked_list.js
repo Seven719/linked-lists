@@ -110,4 +110,18 @@ export default class LinkedList {
 
     return null;
   }
+
+  toString() {
+    let currentNode = this.headNode;
+    let finalString = "";
+
+    while (currentNode !== null) {
+      finalString += `( ${currentNode.value} ) -> `;
+      currentNode = currentNode.nextNode;
+    }
+
+    finalString += "null";
+
+    return finalString;
+  }
 }
